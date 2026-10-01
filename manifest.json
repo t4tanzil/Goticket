@@ -1,15 +1,15 @@
 {
   "name": "Go Ticket",
   "short_name": "GO",
-  "start_url": "/index.html",
+  "start_url": "index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#000000",
   "icons": [
     {
-      "src": "img/Type_Standard_Brand_GO_State_Black_dmvcea.svg",
+      "src": "img/icon-192.png",
       "sizes": "192x192",
-      "type": "image/svg"
+      "type": "image/png"
     },
     {
       "src": "img/icon-512.png",
