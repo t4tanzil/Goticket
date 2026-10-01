@@ -8,7 +8,7 @@ const cacheAssets=[
     "js/app.js",
     "js/stations.js",
     "css/style.css",
-    'css/select.css',
+    "css/select.css",
 
 ];
 self.addEventListener("install", (e) => {
