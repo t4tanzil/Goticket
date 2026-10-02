@@ -6,28 +6,20 @@
 
 }
 /* Theme 1: green (default) */
-:root {
-    --dark:   #0b3d0b;
-    --accent: #0b7a2f;
-}
+:root { --dark: #0b3d0b; }
 
 /* Theme 2: blue */
-:root[data-theme="2"] {
-    --dark:   #122aa8;
-    --accent: #2f4ceb;
-}
+:root[data-theme="2"] { --dark: #122aa8; }
 
 /* Theme 3: slate */
-:root[data-theme="3"] {
-    --dark:   #2b4c5d;
-    --accent: #447b97;
-}
+:root[data-theme="3"] { --dark: #2b4c5d; }
 
 /* Theme 4: pink */
-:root[data-theme="4"] {
-    --dark:   #a21863;
-    --accent: #da218a;
-}
+:root[data-theme="4"] { --dark: #a21863; }
+
+/* Derived from --dark, applies to every theme */
+:root {
+--accent: hsl(from var(--dark) h s calc(l + 15));}
 
 #bottom img {
     cursor: pointer;

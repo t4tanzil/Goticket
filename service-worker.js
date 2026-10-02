@@ -9,6 +9,13 @@ const cacheAssets=[
     "js/stations.js",
     "css/style.css",
     "css/select.css",
+    "img/top.jpeg",
+    "img/bottom.jpeg",
+    "img/X1.jpg",
+    "img/IMG_4767.jpeg",
+    "img/OneWay.jpg",
+    "img/IMG_4818.jpeg",
+    "img/Type_Standard_Brand_GO_State_Black_dmvcea.svg"
 
 ];
 self.addEventListener("install", (e) => {

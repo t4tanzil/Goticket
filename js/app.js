@@ -73,22 +73,25 @@ function updateLocationText() {
         document.querySelector(".location").innerText = "Allandale Waterfront GO to Bradford GO";
     }
 }
-// THEME SWITCHER
 const themeColors = ["#0b3d0b", "#122aa8", "#2b4c5d", "#a21863"];
 let theme = 0;
 
-document.querySelector("#bottom img").addEventListener("click", () => {
-    theme = (theme + 1) % themeColors.length;
+const bottomImg = document.querySelector("#bottom img");
 
-    if (theme === 0) {
-        document.documentElement.removeAttribute("data-theme");
-    } else {
-        document.documentElement.setAttribute("data-theme", theme + 1);
-    }
+if (bottomImg) {
+    bottomImg.addEventListener("click", () => {
+        theme = (theme + 1) % themeColors.length;
 
-    document.querySelector('meta[name="theme-color"]').content = themeColors[theme];
-});
+        if (theme === 0) {
+            document.documentElement.removeAttribute("data-theme");
+        } else {
+            document.documentElement.setAttribute("data-theme", theme + 1);
+        }
 
+        const meta = document.querySelector('meta[name="theme-color"]');
+        if (meta) meta.content = themeColors[theme];
+    });
+}
 setInterval(updateFooterCountdown, 1000);
 updateFooterCountdown();
 updateLocationText();

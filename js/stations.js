@@ -61,7 +61,7 @@ const stations = [
 function populateStations() {
     const fromSelect = document.getElementById("from");
     const toSelect = document.getElementById("to");
-
+    if (!fromSelect || !toSelect) return;   
     stations.forEach((station, index) => {
         const option1 = document.createElement("option");
         option1.value = index + 1;
