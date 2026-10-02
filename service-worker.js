@@ -1,4 +1,4 @@
-const CacheName = "Go-ticket-v1";
+const CacheName = "Go-ticket-v2";
 const cacheAssets=[
     "index.html",   
     "manifest.json",
