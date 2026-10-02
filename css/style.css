@@ -11,10 +11,11 @@ html, body {
 
 body {
     width: 100vw;
-    background: #0b3d0b;
     display: flex;
     flex-direction: column;
-    height: 110vh;
+}
+.container {
+    background:#0b3d0b;
 }
 
 /* ---------- HEADER ---------- */
@@ -188,7 +189,7 @@ body {
 }
 
 .header,
-.footer,body {
+.footer,.container {
     animation: goPulse 2s infinite ease-in-out;
 }
 
@@ -219,6 +220,11 @@ body {
     width: 1.25rem;
     border: 0.1875rem solid white; /* 3px */
     border-radius: 50%;
+}
+
+.top-bottom {
+    margin: 0;
+    padding: 0;
 }
 .top-bottom img{
     width: 100%;
