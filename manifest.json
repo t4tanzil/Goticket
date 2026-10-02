@@ -1,7 +1,7 @@
 {
   "name": "Go Ticket",
   "short_name": "GO",
-  "start_url": "index.html",
+  "start_url": "select.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#000000",
