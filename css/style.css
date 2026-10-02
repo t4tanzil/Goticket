@@ -5,6 +5,33 @@
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 }
+/* Theme 1: green (default) */
+:root {
+    --dark:   #0b3d0b;
+    --accent: #0b7a2f;
+}
+
+/* Theme 2: blue */
+:root[data-theme="2"] {
+    --dark:   #122aa8;
+    --accent: #2f4ceb;
+}
+
+/* Theme 3: slate */
+:root[data-theme="3"] {
+    --dark:   #2b4c5d;
+    --accent: #447b97;
+}
+
+/* Theme 4: pink */
+:root[data-theme="4"] {
+    --dark:   #a21863;
+    --accent: #da218a;
+}
+
+#bottom img {
+    cursor: pointer;
+}
 html, body {
     overflow-x: hidden;
 }
@@ -16,18 +43,18 @@ body {
     flex-direction: column;
 }
 .container {
-    background:#0b3d0b;
+    background: var(--dark);
 }
 
 /* ---------- HEADER ---------- */
 .header {
     height: auto;
     width: 100%;
-    background: #0b3d0b;
+    background: var(--dark);
     color: white;
     text-align: center;
     padding: 1rem;
-    border-bottom: 0.375rem solid #0b7a2f; /* 6px */
+    border-bottom: 0.375rem solid var(--accent); /* 6px */
 
 }
 
@@ -99,7 +126,7 @@ body {
     font-size: 1.1em;
     font-weight: 400;
     letter-spacing: 0.25em;
-    color: #0f5a0f;
+    color: var(--accent);     
 }
 
 
@@ -135,7 +162,7 @@ body {
     top: -1rem;
     height:auto;
     width: 100%;
-    background: #0b3d0b;
+    background: var(--dark);    
     color: white;
     text-align: center;
     padding: 1rem 0 .5625rem 0;
@@ -157,27 +184,15 @@ body {
 }
 /* Animation */
 @keyframes goPulse {
-    0% {
-        background-color: #0b3d0b;
-    }
-    50% {
-        background-color: #0f5a0f;
-    }
-    100% {
-        background-color: #0b3d0b;
-    }
+    0%   { background-color: var(--dark); }
+    50% { background-color: color-mix(in srgb, var(--dark) 60%, var(--accent)); }
+    100% { background-color: var(--dark); }
 }
 
 @keyframes textPulse {
-    0% {
-        color: #ffffff;
-    }
-    50% {
-        color: #5f945f;
-    }
-    100% {
-        color: #ffffff;
-    }
+    0%   { color: #ffffff; }
+    50%  { color: var(--accent); }
+    100% { color: #ffffff; }
 }
 @keyframes goSlide {
     0% {
@@ -216,7 +231,7 @@ body {
     left: 50%;
     z-index: 999;
     transform: translate(-50%, -50%);
-    background-color: #0b7a2f;
+    background-color: var(--accent);
     height: 1.25rem; /* 20px */
     width: 1.25rem;
     border: 0.1875rem solid white; /* 3px */
